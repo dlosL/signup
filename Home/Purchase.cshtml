@@ -1,0 +1,47 @@
+@model ArticoliCart
+
+@{
+    ViewData["Title"] = "Acquistare";
+}
+
+<style>
+    body {
+        background-color: #e0f7fa;
+    }
+
+    h1 {
+        color: #004d40;
+    }
+
+    form {
+        background-color: #b2ebf2;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    label {
+        color: #004d40;
+    }
+
+    .btn-primary {
+        background-color: #004d40;
+        color: #ffffff;
+    }
+</style>
+
+<h1>@ViewData["Title"]</h1>
+
+<!-- Form per l'acquisto di un prodotto -->
+<form method="post" asp-action="Purchase">
+    <!-- Etichetta e input per il nome del prodotto -->
+    @Html.Label("Nome Prodotto:")
+    <input type="text" class="form-control" name="nomeProdotto" required>
+
+    <!-- Etichetta e input per la quantità -->
+    @Html.Label("Quantità:")
+    <input type="number" class="form-control" name="quantita" required>
+
+    <!-- Pulsante per aggiungere il prodotto al carrello -->
+    <button type="submit" class="btn btn-primary">Aggiungi al Carrello</button>
+</form>

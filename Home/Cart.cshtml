@@ -1,0 +1,43 @@
+@model List<ArticoliCart>
+
+<style>
+    body {
+        background-color: #e0f7fa;
+    }
+
+    h1 {
+        color: #004d40; 
+    }
+
+    table {
+        background-color: #b2ebf2; 
+        width: 100%; 
+    }
+
+    th, td {
+        background-color: #80deea; 
+        padding: 8px; 
+        text-align: left; 
+    }
+</style>
+
+<h1>Carrello</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome Prodotto</th>
+            <th>Quantità</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var articolo in Model)
+        {
+            <tr>
+                <td>@articolo.NomeProdotto</td>
+                <td>@articolo.Quantita</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

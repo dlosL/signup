@@ -1,0 +1,70 @@
+@model FormGroup
+@{
+    ViewData["Title"] = "SignUP";
+}
+
+<style>
+    body {
+        background-color: #e0f7fa;
+        color: #004d40;
+    }
+
+    form {
+        background-color: #b2ebf2;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    label {
+        color: #004d40;
+    }
+
+    .btn-primary {
+        background-color: #004d40;
+        color: #ffffff;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Prenota il tuo appuntamento qui!!</h1>
+    <div>
+        <form class="m-2" method="post" asp-action="SignUP">
+            <div class="form-group">
+                <label asp-for="DataDiNascita">Data di nascita:</label>
+                <input asp-for="DataDiNascita" type="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome">Nome:</label>
+                <input asp-for="Nome" type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cognome">Cognome:</label>
+                <input asp-for="Cognome" type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genere">Sesso:</label>
+                <label>Maschio</label>
+                <input asp-for="Genere" type="radio" value="Maschio">
+                <label>Femmina</label>
+                <input asp-for="Genere" type="radio" value="Femmina">
+                <label>Non definito</label>
+                <input asp-for="Genere" type="radio" value="Non definito">
+            </div>
+            <div class="form-group">
+                <label asp-for="Ruolo">Ruolo:</label>
+                <select asp-for="Ruolo" required class="form-control">
+                    <option value="Insegnante">Insegnante</option>
+                    <option value="Studente">Studente</option>
+                    <option value="Genitore">Genitore</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Prenota</button>
+        </form>
+    </div>
+</div>

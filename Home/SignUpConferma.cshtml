@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Conferma Prenotazione";
+}
+
+<style>
+    body {
+        background-color: #e0f7fa; /* Colore di sfondo verde acqua */
+        color: #004d40; /* Colore del testo blu scuro */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Dimensione del testo */
+    }
+
+    p {
+        color: #00695c; /* Colore del testo blu pastello per il paragrafo */
+    }
+</style>
+
+<h1>Grazie per la prenotazione!</h1>
+
+<p>Nome: @ViewData["Nome"]</p>
+<p>Email: @ViewData["Email"]</p>
+<p>Data di nascita: @ViewData["DataNascita"]</p>
+<p>Genere: @ViewData["Genere"]</p>
+<p>Ruolo: @ViewData["Ruolo"]</p>
